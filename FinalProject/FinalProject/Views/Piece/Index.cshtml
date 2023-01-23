@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Piece>
+
+<h2>Pieces</h2>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category ID</th>
+        <th>On Sale</th>
+        <th>Stock Level</th>
+    </tr>
+
+    @foreach (var piece in @Model)
+    {
+            <tr>
+                <td>@piece.PieceID</td>
+                <td>@piece.Name</td>
+                <td>@piece.Price</td>
+                <td>@piece.Artist</td>
+                <td>@piece.Image</td>
+                <td>@piece.Description</td>
+            </tr>
+    }
+
+</table>
