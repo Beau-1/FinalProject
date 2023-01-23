@@ -1,6 +1,10 @@
 ﻿@model IEnumerable<Piece>
 
 <h2>Pieces</h2>
+
+   <div style="display: block">
+     <a href="/Piece/InsertPiece/">Create a New Piece</a>
+ </div>
 <table class="table">
     <tr>
         <th>ID</th>
@@ -24,3 +28,16 @@
     }
 
 </table>
+
+<div style="display: block">
+    <a href="/Piece/UpdatePiece/@Model.PieceID">Update this Piece</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeletePiece", "Piece", "Post"))
+    {
+            <input type="hidden" asp-for="PieceID" value="@Model.PieceID" />
+            <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this piece" />
+    }
+</div>

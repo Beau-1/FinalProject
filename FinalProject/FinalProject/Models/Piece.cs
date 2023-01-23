@@ -1,4 +1,6 @@
-﻿namespace FinalProject.Models
+﻿using Testing.Models;
+
+namespace FinalProject.Models
 {
     public class Piece
     {
@@ -13,5 +15,6 @@
         public double Price { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
     }
 }
