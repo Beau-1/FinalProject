@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using FinalProject.Models;
 
 namespace FinalProject.Controllers
 {
@@ -33,29 +34,37 @@ namespace FinalProject.Controllers
             return View(prod);
         }
 
-        public IActionResult UpdateProductToDatabase(Piece piece)
+        public IActionResult UpdatePieceToDatabase(Piece piece)
         {
             repo.UpdatePiece(piece);
 
             return RedirectToAction("ViewPiece", new { id = piece.PieceID });
         }
 
-        public IActionResult InsertPiece()
-        {
-            var prod = repo.AssignCategory();
-            return View(prod);
-        }
+        
 
-        public IActionResult InsertProductToDatabase(Piece pieceToInsert)
+        public IActionResult InsertPieceToDatabase(Piece pieceToInsert)
         {
             repo.InsertPiece(pieceToInsert);
             return RedirectToAction("Index");
         }
 
-        public IActionResult DeleteProduct(Piece piece)
+        public IActionResult DeletePiece(Piece piece)
         {
             repo.DeletePiece(piece);
             return RedirectToAction("Index");
+        }
+
+        public IActionResult ViewPiece(int id)
+        {
+            var piece = repo.GetPiece(id);
+            return View(piece);
+        }
+
+        public IActionResult Gallery(int id)
+        {
+            var piece = repo.GetPiece(id);
+            return View(piece);
         }
     }
 }

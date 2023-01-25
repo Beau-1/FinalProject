@@ -7,12 +7,12 @@
  </div>
 <table class="table">
     <tr>
-        <th>ID</th>
+        <th>Piece ID</th>
         <th>Name</th>
         <th>Price</th>
-        <th>Category ID</th>
-        <th>On Sale</th>
-        <th>Stock Level</th>
+        <th>Image</th>
+        <th>Artist</th>
+        <th>Description</th>
     </tr>
 
     @foreach (var piece in @Model)
@@ -21,23 +21,11 @@
                 <td>@piece.PieceID</td>
                 <td>@piece.Name</td>
                 <td>@piece.Price</td>
-                <td>@piece.Artist</td>
                 <td>@piece.Image</td>
+                <td>@piece.Artist</td>
                 <td>@piece.Description</td>
             </tr>
     }
 
 </table>
 
-<div style="display: block">
-    <a href="/Piece/UpdatePiece/@Model.PieceID">Update this Piece</a>
-</div>
-
-<div style="display: block">
-
-    @using (Html.BeginForm("DeletePiece", "Piece", "Post"))
-    {
-            <input type="hidden" asp-for="PieceID" value="@Model.PieceID" />
-            <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this piece" />
-    }
-</div>

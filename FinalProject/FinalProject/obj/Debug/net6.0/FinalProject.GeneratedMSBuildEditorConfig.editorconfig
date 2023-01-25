@@ -24,12 +24,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Piece/Gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcR2FsbGVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Piece/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Piece/InsertPiece.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcSW5zZXJ0UGllY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Piece/UpdatePiece.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcVXBkYXRlUGllY2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Piece/ViewPiece.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGllY2VcVmlld1BpZWNlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Beau/source/repos/FinalProject/FinalProject/FinalProject/Views/Shared/Error.cshtml]

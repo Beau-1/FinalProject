@@ -1,4 +1,4 @@
-﻿using Testing.Models;
+﻿using FinalProject.Models;
 
 namespace FinalProject.Models
 {
@@ -15,6 +15,6 @@ namespace FinalProject.Models
         public double Price { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public IEnumerable<Category> Categories { get; set; }
+     
     }
 }

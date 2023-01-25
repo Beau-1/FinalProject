@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using Dapper;
-using Testing.Models;
+using FinalProject.Models;
 
 namespace FinalProject.Models
 {
@@ -20,28 +20,25 @@ namespace FinalProject.Models
 
         public void InsertPiece(Piece pieceToInsert)
         {
-            _conn.Execute("INSERT INTO pieces (NAME, PRICE, CATEGORYID) VALUES (@name, @price, @categoryID);",
-                new { name = pieceToInsert.Name, price = pieceToInsert.Price, categoryID = pieceToInsert.CategoryID });
+            _conn.Execute("INSERT INTO pieces (NAME, PRICE) VALUES (@name, @price);",
+                new { name = pieceToInsert.Name, price = pieceToInsert.Price });
         }
 
-        public IEnumerable<Category> GetCategories()
+        public void UpdatePiece(Piece piece)
         {
-            return _conn.Query<Category>("SELECT * FROM categories;");
-        }
-
-        public Piece AssignCategory()
-        {
-            var categoryList = GetCategories();
-            var product = new Piece();
-            piece.Categories = categoryList;
-            return piece;
+            _conn.Execute("UPDATE products SET Name = @name, Price = @price WHERE PieceID = @id",
+             new { name = piece.Name, price = piece.Price, id = piece.PieceID });
         }
 
         public void DeletePiece(Piece piece)
         {
-            _conn.Execute("DELETE FROM REVIEWS WHERE PieceID = @id;", new { id = piece.PieceID });
-            _conn.Execute("DELETE FROM Sales WHERE PieceID = @id;", new { id = piece.PieceID });
+            
             _conn.Execute("DELETE FROM Pieces WHERE PieceID = @id;", new { id = piece.PieceID });
         }
+
+        public Piece GetPiece(int id)
+        {
+            return _conn.QuerySingle<Piece>("SELECT * FROM PIECES WHERE PieceId = @id;",new {id = id});
+        } 
     }
 }
