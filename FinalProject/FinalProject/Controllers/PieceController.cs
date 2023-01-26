@@ -41,7 +41,11 @@ namespace FinalProject.Controllers
             return RedirectToAction("ViewPiece", new { id = piece.PieceID });
         }
 
-        
+        public IActionResult InsertPiece()
+        {
+            var piece = new Piece();
+            return View(piece);
+        }
 
         public IActionResult InsertPieceToDatabase(Piece pieceToInsert)
         {

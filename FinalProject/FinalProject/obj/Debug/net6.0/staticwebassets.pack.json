@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Beau\\source\\repos\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\images\\Cat_1.jpg",
+      "PackagePath": "staticwebassets\\images\\Cat_1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Beau\\source\\repos\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\images\\Robot_1.webp",
+      "PackagePath": "staticwebassets\\images\\Robot_1.webp"
+    },
+    {
+      "Id": "C:\\Users\\Beau\\source\\repos\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\images\\Wave_1.jpg",
+      "PackagePath": "staticwebassets\\images\\Wave_1.jpg"
+    },
+    {
       "Id": "C:\\Users\\Beau\\source\\repos\\FinalProject\\FinalProject\\FinalProject\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

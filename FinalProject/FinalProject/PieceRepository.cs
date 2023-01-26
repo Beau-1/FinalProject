@@ -20,14 +20,14 @@ namespace FinalProject.Models
 
         public void InsertPiece(Piece pieceToInsert)
         {
-            _conn.Execute("INSERT INTO pieces (NAME, PRICE) VALUES (@name, @price);",
-                new { name = pieceToInsert.Name, price = pieceToInsert.Price });
+            _conn.Execute("INSERT INTO pieces (NAME, PRICE, ARTIST, DESCRIPTION, IMAGE) VALUES (@name, @price, @artist, @description, @image);",
+                new { name = pieceToInsert.Name, price = pieceToInsert.Price, pieceToInsert.Artist, description = pieceToInsert.Description, image = pieceToInsert.Image });
         }
 
         public void UpdatePiece(Piece piece)
         {
-            _conn.Execute("UPDATE products SET Name = @name, Price = @price WHERE PieceID = @id",
-             new { name = piece.Name, price = piece.Price, id = piece.PieceID });
+            _conn.Execute("UPDATE pieces SET Name = @name, Price = @price, Artist = @artist, Description = @description, Image = @image WHERE PieceID = @id",
+             new { name = piece.Name, price = piece.Price, piece.Artist, piece.Description, piece.Image, id = piece.PieceID });
         }
 
         public void DeletePiece(Piece piece)

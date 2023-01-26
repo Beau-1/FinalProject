@@ -15,7 +15,8 @@ namespace FinalProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index", "Piece");
+            
         }
 
         public IActionResult Privacy()
@@ -28,5 +29,7 @@ namespace FinalProject.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
     }
 }

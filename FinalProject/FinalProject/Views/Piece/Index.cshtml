@@ -13,17 +13,20 @@
         <th>Image</th>
         <th>Artist</th>
         <th>Description</th>
+        <th>Gallery</th>
+
     </tr>
 
     @foreach (var piece in @Model)
     {
             <tr>
-                <td>@piece.PieceID</td>
+                <td><a href=/Piece/ViewPiece/@piece.PieceID>@piece.PieceID</a></td>
                 <td>@piece.Name</td>
                 <td>@piece.Price</td>
                 <td>@piece.Image</td>
                 <td>@piece.Artist</td>
                 <td>@piece.Description</td>
+                    <td><a href=/Piece/Gallery/@piece.PieceID>View</a></td>
             </tr>
     }
 
